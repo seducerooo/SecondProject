@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Demo\DemoController;
+use App\Http\Controllers\Home\HomeSliderController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -29,6 +30,8 @@ Route::controller(DemoController::class)->group(function (){
     Route::get('/contact','contact')->name('contact.page');
 });
 
+// Admin routes
+
 Route::controller(AdminController::class)->group(function (){
     Route::get('/admin/logout','destroy')->name('admin.logout');
     Route::get('/admin/profile','profile')->name('admin.profile');
@@ -37,6 +40,18 @@ Route::controller(AdminController::class)->group(function (){
     Route::get('/change/password','ChangePassword')->name('change.password');
     Route::post('/update/password','UpdatePassword')->name('update.password');
 });
+
+
+ //   Home Slide routes
+Route::controller(HomeSliderController::class)->group(function (){
+    Route::get('/home/slide','HomeSlider')->name('home.slide');
+
+});
+
+
+
+
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
