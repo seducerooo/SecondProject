@@ -37,7 +37,7 @@
                         <span>About Page Setup</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="#">About Page</a></li>
+                        <li><a href="{{ route('about.page') }}">About Page</a></li>
                         <li><a href="#">About Multi Image</a></li>
                         <li><a href="#">All Multi Image</a></li>
                     </ul>
