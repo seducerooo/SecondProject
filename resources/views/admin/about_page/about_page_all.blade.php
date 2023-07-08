@@ -36,7 +36,7 @@
                                     <label for="example-text-input" class="col-sm-2 col-form-label">Short Description</label>
                                     <div class="col-sm-10">
                                         <textarea required="" name="short_description" class="form-control" rows="5">
-                                            {{ $aboutpage->shoert_description }}
+                                            {{ $aboutpage->short_description }}
                                         </textarea>
                                     </div>
                                 </div>
@@ -47,7 +47,7 @@
                                     <label for="example-text-input" class="col-sm-2 col-form-label">Long Description</label>
                                     <div class="col-sm-10">
                                            <textarea id="elm1" required="" name="long_description" class="form-control" rows="5">
-                                            {{ $aboutpage->shoert_description }}
+                                            {{ $aboutpage->short_description }}
                                         </textarea>
                                     </div>
                                 </div>
