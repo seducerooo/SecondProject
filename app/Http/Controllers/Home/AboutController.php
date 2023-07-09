@@ -74,7 +74,7 @@ class AboutController extends Controller
 
             Image::make($multi_image)->resize(220, 220)->save('upload/multi/' . $name_gen);
 
-            $save_url = 'upload/about_image' . $name_gen;
+            $save_url = 'upload/multi/' . $name_gen;
 
             MultiImage::query()->insert([
                 'multi_image' => $save_url,
@@ -90,5 +90,10 @@ class AboutController extends Controller
 
 
 
+    }
+
+    public function AllMultiImage(){
+        $allMultiImage = MultiImage::query()->get()->all();
+        return view('admin.about_page.all_multiimage',compact('allMultiImage'));
     }
 }
