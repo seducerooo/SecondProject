@@ -123,8 +123,17 @@ class AboutController extends Controller
         return to_route('all.multi.image')->with($notification);
     }
     public function DestroyMultiImage(string $id){
-        DB::table('multi_images')->where('id', $id)->delete();
-        return to_route('all.multi.image');
+        $notification = array(
+            'message' => 'Image Deleted  Successfully',
+            'alert-type' => 'success',
+        );
+//        DB::table('multi_images')->where('id', $id)->delete();
+        $multi = MultiImage::query()->find($id);
+        $img = $multi->multi_image;
+        unlink($img);
+        MultiImage::query()->findOrFail($id)->delete();
+
+        return to_route('all.multi.image')->with($notification);
 
     }
 }

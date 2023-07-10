@@ -44,14 +44,7 @@
                                     <td>
                                         <a href="{{ route('edit.multi.image',$item->id) }}" class="btn btn-info sm" title="Edit Data"><i class="fas fa-ad"></i> </a>
 
-                                         <form class="btn btn-danger sm"  action="{{ route('delete.multi.image',$item->id) }}" method="post">
-                                             @csrf
-                                             @method('DELETE')
-                                             <i class="fas fa-trash-alt">
-                                             <input type="submit" class="btn btn-danger sm" value="">
-                                             </i>
-                                         </form>
-{{--                                        <a  href="{{ route('delete.multi.image',$item->id) }}" class="btn btn-danger sm" title="Delete Data"><i class="fas fa-trash-alt"></i> </a>--}}
+                                        <a  href="{{ route('delete.multi.image',$item->id) }}" class="btn btn-danger sm" title="Delete Data" id="delete"><i class="fas fa-trash-alt"></i> </a>
                                     </td>
                                 </tr>
 
