@@ -7,6 +7,7 @@ use App\Models\About;
 use App\Models\MultiImage;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
+use Illuminate\Support\Facades\DB;
 use Image;
 
 class AboutController extends Controller
@@ -95,5 +96,35 @@ class AboutController extends Controller
     public function AllMultiImage(){
         $allMultiImage = MultiImage::query()->get()->all();
         return view('admin.about_page.all_multiimage',compact('allMultiImage'));
+    }
+
+    public function EditMultiImage($id){
+        $MultiImage = MultiImage::query()->find($id);
+        return view('admin.about_page.edit_multi_image',compact('MultiImage'));
+    }
+    public function UpdateMultiImage(Request $request){
+        $image = $request->file('multi_image');
+
+            $name_gen = hexdec(uniqid()) . '.' . $image->getClientOriginalExtension();
+
+            Image::make($image)->resize(220, 220)->save('upload/multi/' . $name_gen);
+
+            $save_url = 'upload/multi/' . $name_gen;
+
+            $UpdateMultiImage = new MultiImage();
+            $UpdateMultiImage->multi_image = $save_url;
+            $UpdateMultiImage->updated_at = $request['updated_at'];
+            $UpdateMultiImage->save();
+
+        $notification = array(
+            'message' => ' Image Updated  Successfully',
+            'alert-type' => 'success',
+        );
+        return to_route('all.multi.image')->with($notification);
+    }
+    public function DestroyMultiImage(string $id){
+        DB::table('multi_images')->where('id', $id)->delete();
+        return to_route('all.multi.image');
+
     }
 }
