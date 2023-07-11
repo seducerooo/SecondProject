@@ -290,7 +290,7 @@
                         <div class="col-xl-3 col-lg-4 col-md-6">
                             <div class="services__style__two__item">
                                 <div class="services__style__two__icon">
-                                    <img src="{{ asset('frontend/') }}assets/img/icons/services_light_icon02.png" alt="">
+                                    <img src="{{ asset('frontend/assets/img/icons/services_light_icon02.png') }}" alt="">
                                 </div>
                                 <div class="services__style__two__content">
                                     <h3 class="title"><a href="services-details.html">Visual Design</a></h3>

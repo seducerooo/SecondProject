@@ -61,7 +61,8 @@ class AboutController extends Controller
     }
     public function HomeAbout(){
         $aboutpage =  About::query()->find(1);
-        return view('frontend.about_page',compact('aboutpage'));
+        $allMultiImage = MultiImage::all();
+        return view('frontend.about_page',['aboutpage' => $aboutpage,'allMultiImage' => $allMultiImage]);
     }
 
     public function AboutMultiImage(){
@@ -136,4 +137,5 @@ class AboutController extends Controller
         return to_route('all.multi.image')->with($notification);
 
     }
+
 }
