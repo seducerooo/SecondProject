@@ -50,8 +50,8 @@
                         <span>Portfolio Page Setup</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="#">All Portfolio</a></li>
-                        <li><a href="#">Add Portfolio</a></li>
+                        <li><a href="{{ route('all.portfolio') }}">All Portfolio</a></li>
+                        <li><a href="{{ route('add.portfolio') }}">Add Portfolio</a></li>
 
                     </ul>
                 </li>
@@ -108,10 +108,6 @@
 
                     </ul>
                 </li>
-
-
-
-
 
             </ul>
         </div>

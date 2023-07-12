@@ -86,15 +86,15 @@
                                     <p class="desc">{{ $aboutpage->long_description }}<ul class="about__exp__list">
                                         <li>
                                             <h5 class="title">User experience design - (Product Design)</h5>
-                                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which dont look even slightly believable. If you are going to unseery.</p>
+                                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to unseery.</p>
                                         </li>
                                         <li>
                                             <h5 class="title">Web and user interface design - Development</h5>
-                                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which dont look even slightly believable. If you are going to use a passage of lorem ipsum.</p>
+                                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of lorem ipsum.</p>
                                         </li>
                                         <li>
                                             <h5 class="title">Interaction design - Animation</h5>
-                                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which dont look even slightly believable.</p>
+                                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
                                         </li>
                                     </ul>
                                 </div>
