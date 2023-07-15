@@ -62,7 +62,7 @@ class PortfolioController extends Controller
 
         return view('admin.portfolio.portfolio_edit',compact('portfolio'));
     }
-    public function UpdatePortfolio(Request $request){
+    public function UpdatePortfolio(Request $request ,string $id){
         $portfolio = $request->file('portfolio_image');
 
         $name_gen = hexdec(uniqid()) . '.' . $portfolio->getClientOriginalExtension();
