@@ -21,12 +21,12 @@
             </div>
             <div class="breadcrumb__wrap__icon">
                 <ul>
-                    <li><img src="assets/img/icons/breadcrumb_icon01.png" alt=""></li>
-                    <li><img src="assets/img/icons/breadcrumb_icon02.png" alt=""></li>
-                    <li><img src="assets/img/icons/breadcrumb_icon03.png" alt=""></li>
-                    <li><img src="assets/img/icons/breadcrumb_icon04.png" alt=""></li>
-                    <li><img src="assets/img/icons/breadcrumb_icon05.png" alt=""></li>
-                    <li><img src="assets/img/icons/breadcrumb_icon06.png" alt=""></li>
+                    <li><img src="{{ asset('frontend/assets/img/icons/breadcrumb_icon01.png') }}" alt=""></li>
+                    <li><img src="{{ asset('frontend/assets/img/icons/breadcrumb_icon02.png') }}" alt=""></li>
+                    <li><img src="{{ asset('frontend/assets/img/icons/breadcrumb_icon03.png') }}" alt=""></li>
+                    <li><img src="{{ asset('frontend/assets/img/icons/breadcrumb_icon04.png') }}" alt=""></li>
+                    <li><img src="{{ asset('frontend/assets/img/icons/breadcrumb_icon05.png') }}" alt=""></li>
+                    <li><img src="{{ asset('frontend/assets/img/icons/breadcrumb_icon06.png') }}" alt=""></li>
                 </ul>
             </div>
         </section>
@@ -74,7 +74,7 @@
                                             <h4 class="title">Previous Post</h4>
                                             <div class="blog__next__prev__post">
                                                 <div class="blog__next__prev__thumb">
-                                                    <a href="blog-details.html"><img src="assets/img/blog/blog_prev.jpg" alt=""></a>
+                                                    <a href="blog-details.html"><img src="{{ asset('frontend/assets/img/blog/blog_prev.jpg') }}" alt=""></a>
                                                 </div>
                                                 <div class="blog__next__prev__content">
                                                     <h5 class="title"><a href="blog-details.html">Digital Marketing Agency Pricing Guide.</a></h5>
@@ -87,7 +87,7 @@
                                             <h4 class="title">Next Post</h4>
                                             <div class="blog__next__prev__post">
                                                 <div class="blog__next__prev__thumb">
-                                                    <a href="blog-details.html"><img src="assets/img/blog/blog_next.jpg" alt=""></a>
+                                                    <a href="blog-details.html"><img src="{{ asset('frontend/assets/img/blog/blog_next.jpg') }}" alt=""></a>
                                                 </div>
                                                 <div class="blog__next__prev__content">
                                                     <h5 class="title"><a href="blog-details.html">App Prototyping
@@ -105,7 +105,7 @@
                                 <ul class="comment__list">
                                     <li class="comment__item">
                                         <div class="comment__thumb">
-                                            <img src="assets/img/blog/comment_thumb01.png" alt="">
+                                            <img src="{{ asset('frontend/assets/img/blog/comment_thumb01.png') }}" alt="">
                                         </div>
                                         <div class="comment__content">
                                             <div class="comment__avatar__info">
@@ -120,7 +120,7 @@
                                     </li>
                                     <li class="comment__item children">
                                         <div class="comment__thumb">
-                                            <img src="assets/img/blog/comment_thumb02.png" alt="">
+                                            <img src="{{ asset('frontend/assets/img/blog/comment_thumb02.png') }}" alt="">
                                         </div>
                                         <div class="comment__content">
                                             <div class="comment__avatar__info">
@@ -135,7 +135,7 @@
                                     </li>
                                     <li class="comment__item">
                                         <div class="comment__thumb">
-                                            <img src="assets/img/blog/comment_thumb03.png" alt="">
+                                            <img src="{{ asset('frontend/assets/img/blog/comment_thumb03.png') }}" alt="">
                                         </div>
                                         <div class="comment__content">
                                             <div class="comment__avatar__info">
@@ -150,7 +150,7 @@
                                     </li>
                                     <li class="comment__item children">
                                         <div class="comment__thumb">
-                                            <img src="assets/img/blog/comment_thumb04.png" alt="">
+                                            <img src="{{ asset('frontend/assets/img/blog/comment_thumb04.png') }}" alt="">
                                         </div>
                                         <div class="comment__content">
                                             <div class="comment__avatar__info">
@@ -218,14 +218,14 @@
                                     @endforeach
                                 </ul>
                             </div>
-                            <div class="widget">
-                                <h4 class="widget-title">Categories</h4>
-                                <ul class="sidebar__cat">
-                                    @foreach($categories as $cat)
-                                    <li class="sidebar__cat__item"><a href="blog.html">{{ $cat->blog_category }}</a></li>
-                                    @endforeach
-                                </ul>
-                            </div>
+<div class="widget">
+    <h4 class="widget-title">Categories</h4>
+    <ul class="sidebar__cat">
+        @foreach($categories as $cat)
+        <li class="sidebar__cat__item"><a href="{{ route('category.blog',$cat->id) }}">{{ $cat->blog_category }}</a></li>
+        @endforeach
+    </ul>
+</div>
                             <div class="widget">
                                 <h4 class="widget-title">Recent Comment</h4>
                                 <ul class="sidebar__comment">
