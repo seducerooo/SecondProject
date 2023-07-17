@@ -8,7 +8,7 @@
                 <div class="row justify-content-center">
                     <div class="col-xl-6 col-lg-8 col-md-10">
                         <div class="breadcrumb__wrap__content">
-                            <h2 class="title">{{ $category_name->blog_category }}</h2>
+                            <h2 class="title">All Blogs</h2>
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="index.html">Home</a></li>
@@ -38,26 +38,26 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8">
-                        @foreach($blogpost as $item)
-                        <div class="standard__blog__post">
-                            <div class="standard__blog__thumb">
-                                <a href="blog-details.html"><img src="{{ asset($item->blog_image) }}" alt=""></a>
-                                <a href="blog-details.html" class="blog__link"><i class="far fa-long-arrow-right"></i></a>
-                            </div>
-                            <div class="standard__blog__content">
-                                <div class="blog__post__avatar">
-                                    <div class="thumb"><img src="{{ asset($item->blog_image) }}" alt=""></div>
-                                    <span class="post__by">By : <a href="#">Halina Spond</a></span>
+                        @foreach($allblogs  as $item)
+                            <div class="standard__blog__post">
+                                <div class="standard__blog__thumb">
+                                    <a href="blog-details.html"><img src="{{ asset($item->blog_image) }}" alt=""></a>
+                                    <a href="blog-details.html" class="blog__link"><i class="far fa-long-arrow-right"></i></a>
                                 </div>
-                                <h2 class="title"><a href="{{ route('blog.details',$item->id) }}">{{ $item->blog_title }}</a></h2>
-                                <p>{!! \Illuminate\Support\Str::limit($item->blog_description,250) !!}</p>
-                                <ul class="blog__post__meta">
-                                    <li><i class="fal fa-calendar-alt"></i> 25 january 2021</li>
-                                    <li><i class="fal fa-comments-alt"></i> <a href="#">Comment (08)</a></li>
-                                    <li class="post-share"><a href="#"><i class="fal fa-share-all"></i> (18)</a></li>
-                                </ul>
+                                <div class="standard__blog__content">
+                                    <div class="blog__post__avatar">
+                                        <div class="thumb"><img src="{{ asset($item->blog_image) }}" alt=""></div>
+                                        <span class="post__by">By : <a href="#">Halina Spond</a></span>
+                                    </div>
+                                    <h2 class="title"><a href="{{ route('blog.details',$item->id) }}">{{ $item->blog_title }}</a></h2>
+                                    <p>{!! \Illuminate\Support\Str::limit($item->blog_description,250) !!}</p>
+                                    <ul class="blog__post__meta">
+                                        <li><i class="fal fa-calendar-alt"></i> 25 january 2021</li>
+                                        <li><i class="fal fa-comments-alt"></i> <a href="#">Comment (08)</a></li>
+                                        <li class="post-share"><a href="#"><i class="fal fa-share-all"></i> (18)</a></li>
+                                    </ul>
+                                </div>
                             </div>
-                        </div>
                         @endforeach
                         <div class="pagination-wrap">
                             <nav aria-label="Page navigation example">
