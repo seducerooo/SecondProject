@@ -100,7 +100,7 @@
                         <span>Contact Message </span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="#">Contact Message</a></li>
+                        <li><a href="{{ route('contact.message') }}">Contact Message</a></li>
 
 
                     </ul>

@@ -15,7 +15,7 @@
                                     <li class="active"><a href="index.html">Home</a></li>
                                     <li><a href="{{ route('home.about') }}">About</a></li>
                                     <li><a href="services-details.html">Services</a></li>
-                                    <li class="menu-item-has-children"><a href="#">Portfolio</a>
+                                    <li class="menu-item-has-children"><a href="{{ route('home.portfolio') }}">Portfolio</a>
                                         <ul class="sub-menu">
                                             <li><a href="#">Portfolio</a></li>
                                             <li><a href="#">Portfolio Details</a></li>
