@@ -1,4 +1,9 @@
 @extends('frontend.main_master')
+@section('title')
+
+    Contact | Second-Project
+
+@endsection
 @section('main')
 
     <main>

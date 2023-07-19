@@ -32,19 +32,27 @@ Route::get('/dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::controller(DemoController::class)->group(function (){
+
+    Route::get('/home','HomeMain')->name('home');
+
     Route::get('/about','index')->name('about.page');
     Route::get('/contact','contact')->name('contact.page');
 });
 
 // Admin routes
 
+Route::middleware(['auth'])->group(function (){
+
 Route::controller(AdminController::class)->group(function (){
     Route::get('/admin/logout','destroy')->name('admin.logout');
     Route::get('/admin/profile','profile')->name('admin.profile');
     Route::get('/edit/profile','EditProfile')->name('edit.profile');
     Route::post('/store/profile','StoreProfile')->name('store.profile');
-    Route::get('/change/password','ChangePassword')->name('change.password');
+    Route::get('/change/password','ChangePassword')->name('change.password')->middleware('auth');
     Route::post('/update/password','UpdatePassword')->name('update.password');
+});
+
+
 });
 
 

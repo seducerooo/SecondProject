@@ -8,8 +8,8 @@ use Illuminate\Http\Request;
 class DemoController extends Controller
 {
     //
-    public function index(){
-        return view('about');
+    public function HomeMain(){
+        return view('frontend.index');
     }
     public function contact(){
         return view('contact');
