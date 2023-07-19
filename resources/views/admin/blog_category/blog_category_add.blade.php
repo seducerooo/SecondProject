@@ -12,7 +12,7 @@
 
                             <h4 class="card-title">Portfolio  Page </h4>
 
-                            <form method="post" action="{{route('store.blog.category')}}">
+                            <form method="post"  action="{{route('store.blog.category')}}">
                                 @csrf
 
                                 <div class="row mb-3">
@@ -48,18 +48,6 @@
     </div>
 
 
-    <script type="text/javascript">
 
-        $(document).ready(function(){
-            $('#image').change(function(e){
-                var reader = new FileReader();
-                reader.onload = function(e){
-                    $('#showImage').attr('src',e.target.result);
-                }
-                reader.readAsDataURL(e.target.files['0']);
-            });
-        });
-
-    </script>
 
 @endsection
